@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 body{
     background-color: black;
@@ -18,10 +20,11 @@ nav{
     position: fixed;
 }
 .social-icons{
+    margin-top: 7px;
     padding-right: 50px;
 }
 .mid-menu{
-    gap: 25px;
+    column-gap: 16px;
 }
 .logo{
     padding-left: 90px;
@@ -42,50 +45,50 @@ nav p{
 
 /* Body  starts here */
 
-main .background{
-    position: absolute;
-    right: 0px;
+.container{
+    top: 60px;
     width: 100%;
-    z-index: -10;
-}
-.heading{
     color: white;
-    font-weight: 700px;
-    padding-left: 60px;
-    padding-top: 100px;
+}
+.banner{
+    object-fit: cover;
+    top: 60px;
+    background-image: url(./images/pizza.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.heading{
     font-size: 85px;
 }
 .red-rect{
-    margin: 30px 30px 30px 60px;
+    margin-bottom: 30px;
     background-color: rgba(242, 76, 76, 1);
-    width: 400px;
+    width: 480px;
     height: 12px;
-    z-index: 10;
 }
 .head-desc{
-    position: static;
     font-size: 22px;
     font-weight: 400;
-    color: white;
     line-height: 30px;
-    padding-left: 60px;
 }
+.banner .content{
+    padding: 10% 5%;
+}
+.about{
+    color: white;
+    margin-top: 40px;
+}
+
 .about-head{
     font-size: 50px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 .head-under{
     background-color: rgba(242, 76, 76, 1);
     width: 300px;
     height: 8px;
     margin: auto;
-}
-.about{
-    color: white;
-    margin-top: 300px;
 }
 .content-about{
     margin-top: 20px;
@@ -100,18 +103,17 @@ main .background{
     margin-bottom: 10px;
 }
 .about-desc{
-    display: inline;
     line-height: 45px;
     font-size: 20px;
     width: 700px;
 }
+
+/* menu */
+
 .food-menu{
-    justify-content: center;
     padding: 40px;
     color: white;
-    margin-right: 70px;
-    margin-left: 70px;
-    /* width: 800px; */
+    margin: 0px 70px;
 }
 .menu-div{
     margin-top: 50px;
@@ -130,16 +132,15 @@ main .background{
     margin-left: 30px;
 }
 .menu-items{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
     margin-top: 20px;
-    flex-wrap: wrap;
 }
 .find-con{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
     justify-content: center;
-    margin-left: 90px;
-    margin-right: 90px;
+    gap: 40px;
 }
 footer img{
     margin-top: 30px;
